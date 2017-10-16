@@ -2,6 +2,12 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+  
 handlers:
 - url: /browser-extension.zip
   static_files: browser-extension.zip
@@ -12,8 +18,8 @@ handlers:
   script: topedit.app
   secure: always
   
-- url: /top-edit-list-1-page
-  script: topeditlist1page.app
+- url: /top-edits-list-1-page
+  script: topeditslist1page.app
   secure: always
   
 - url: /create-my-edit
