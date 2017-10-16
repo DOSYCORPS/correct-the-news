@@ -1,10 +1,14 @@
 { 
   "name": "Correct the news",
+  "manifest_version": 2,
   "author": "dosy (The Dosyago Corporation)",
   "version": "1.0",
   "permissions": [
     "activeTab",
     "contextMenus",
     "notifications"
-  ]
+  ],
+  "background": {
+    "scripts": [ "hot-reload.js", "bg.js" ]
+  }
 }
