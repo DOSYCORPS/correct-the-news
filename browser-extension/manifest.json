@@ -5,8 +5,7 @@
   "version": "1.0",
   "permissions": [
     "activeTab",
-    "contextMenus",
-    "notifications"
+    "contextMenus"
   ],
   "background": {
     "scripts": [ "hot-reload.js", "bg.js" ]
