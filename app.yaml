@@ -1,0 +1,34 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /browser-extension.zip
+  static_files: browser-extension.zip
+  upload: browser-extension.zip
+  secure: always
+  
+- url: /top-edit
+  script: topedit.app
+  secure: always
+  
+- url: /top-edit-list-1-page
+  script: topeditlist1page.app
+  secure: always
+  
+- url: /create-my-edit
+  script: createmyedit.app
+  secure: always
+  
+- url: /delete-my-edit
+  script: deletemyedit.app
+  secure: always
+
+- url: /
+  static_files: landing.html
+  upload: landing.html
+  secure: always
+  
+- url: /
+  static_dir: static
+  secure: always
