@@ -12,18 +12,13 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-template = JINJA_ENVIRONMENT.get_template(os.path.join('markup','top-edits-list-1-page.html'))
+template = JINJA_ENVIRONMENT.get_template(os.path.join('markup','create-my-edit.html'))
 
-edits_stub = {
-  "edits": [
-    { "text" : "HI" }
-  ]
-}
-class List(webapp2.RequestHandler):
+class Create(webapp2.RequestHandler):
   def get( self, *args, **kwargs ):
-    self.response.write(template.render(edits_stub))
+    self.response.write(template.render())
 
-routes = [ webapp2.Route( '/top-edits-list-1-page', handler=List ) ]
+routes = [ webapp2.Route( '/create-my-edit', handler=Create ) ]
 
 app = webapp2.WSGIApplication( routes=routes, debug=True )   
     

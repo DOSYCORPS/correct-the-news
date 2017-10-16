@@ -1,7 +1,8 @@
-<ul>
-  {% for edit in edits %}
-  <li>
-    {{ edit.text }}
-  </li>
-  {% endfor %}
-</ul>
+<form method=POST action=/create-my-edit>
+  <input type=hidden name=attachment>
+  <p>
+    <textarea required name=edit placeholder="my edit"></textarea>
+  <p>
+    <button name=publish value=my-edit>Publish</button>
+</form>
+
