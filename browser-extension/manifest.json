@@ -1,0 +1,10 @@
+{ 
+  "name": "Correct the news",
+  "author": "dosy (The Dosyago Corporation)",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "notifications"
+  ]
+}
