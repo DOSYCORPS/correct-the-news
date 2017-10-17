@@ -2,31 +2,39 @@
   <form method=POST action=/create-my-edit>
     <h1>My edit</h1>
     <p>
-      <input type=url name=url placeholder="page url">
+      <input required type=url name=url placeholder="page url">
     <p>
-      <input type=text name=selector placeholder="selector">
+      <input required type=text name=document_index placeholder="document index">
     <p>
-      <input type=number name=element_index placeholder="element index">
+      <input required type=number name=paragraph_index placeholder="paragraph index">
     <p>
-      <input type=number name=sentence_index placeholder="sentence index">
+      <input required type=number name=sentence_index placeholder="sentence index">
     <p>
-      <input type=text name=strike_trigram placeholder="trigram at strike point">
+      <input required type=text name=sentence_before placeholder="sentence before">
     <p>
-      <input type=text name=insert_trigram placeholder="trigram at insert point">
+      <input required type=text name=sentence_after placeholder="sentence after">
     <p>
-      <select name=attachment_type>
-        <option value=before_begin>before begin</option>
-        <option value=after_end>after end</option>
-        <option value=middle>middle</option>
+      <input required type=text name=paragraph_before placeholder="paragraph before">
+    <p>
+      <input required type=text name=paragraph_after placeholder="paragraph after">
+    <p>
+      <select required name=sentence_attachment_type>
+        <option value="" disabled selected>Position of sentence</option>
+        <option value=before_begin>paragraph start</option>
+        <option value=after_end>paragraph end</option>
+        <option value=middle>paragraph middle</option>
       </select>
     </p>
     <p>
-      <input type=number name=strike_start placeholder="strike start">
-      <input type=number name=strike_end placeholder="strike end">
+      <select required name=paragraph_attachment_type>
+        <option value="" disabled selected>Position of paragraph</option>
+        <option value=before_begin>document start</option>
+        <option value=after_end>document end</option>
+        <option value=middle>document middle</option>
+      </select>
+    </p>
     <p>
-      <input type=number name=offset_in_sentence placeholder="offset in sentence">
-    <p>
-      <textarea required name=content placeholder="insert content"></textarea>
+      <textarea required name=edited_sentence placeholder="edited sentence"></textarea>
     <p>
       <button name=publish value=my-edit>Publish</button>
   </form>
