@@ -16,7 +16,7 @@ template = JINJA_ENVIRONMENT.get_template(os.path.join('markup','top-edit.html')
 
 edit_stub = { 
   "edit" : {
-    "text" : "HI" 
+    "text": "LMFAO"
   }
 }
 
