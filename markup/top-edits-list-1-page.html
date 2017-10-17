@@ -1,7 +1,10 @@
-<ul>
-  {% for edit in edits %}
-  <li>
-    {{ edit.text }}
-  </li>
-  {% endfor %}
-</ul>
+<article>
+  <ul>
+    <h1>Top Edits</h1>
+    {% for edit in edits %}
+    <li>
+      {{ edit.text }}
+    </li>
+    {% endfor %}
+  </ul>
+</article>

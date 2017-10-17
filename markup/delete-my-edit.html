@@ -1,11 +1,14 @@
-<form method=POST action=/delete-my-edit>
-  <input type=hidden name=editid value="{{ edit_id }}">
-  <select name=confirmation required>
-    <option selected disabled value="">Are you sure?</option>
-    <option value="yes">Yes, delete it</option>
-    <option value="no">No, keep it</option>
-  </select>
-  <p>
-    <button name=delete value=my-edit>Delete</button>
-</form>
+<article>
+  <form method=POST action=/delete-my-edit>
+    <h1>Delete my edit</h1>
+    <input type=hidden name=editid value="{{ edit_id }}">
+    <select name=confirmation required>
+      <option selected disabled value="">Are you sure?</option>
+      <option value="yes">Yes, delete it</option>
+      <option value="no">No, keep it</option>
+    </select>
+    <p>
+      <button name=delete value=my-edit>Delete</button>
+  </form>
+</article>
 

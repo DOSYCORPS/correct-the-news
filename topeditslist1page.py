@@ -16,7 +16,8 @@ template = JINJA_ENVIRONMENT.get_template(os.path.join('markup','top-edits-list-
 
 edits_stub = {
   "edits": [
-    { "text" : "HI" }
+    { "text" : "Trump is a bigot / NY Times is bigoted for being so biased againsed Trump's opinions." },
+    { "text" : "freedom / tyranny is achieved through the rigorous policing of the subjective feelings of a small group of people as objective offences to reallocate power to that small group." }
   ]
 }
 class List(webapp2.RequestHandler):
