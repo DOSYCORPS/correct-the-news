@@ -4,10 +4,20 @@
   "author": "dosy (The Dosyago Corporation)",
   "version": "1.0",
   "permissions": [
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking",
     "activeTab",
     "contextMenus"
   ],
   "background": {
     "scripts": [ "hot-reload.js", "bg.js" ]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "js": ["top.js"]
+    }
+  ]
 }
